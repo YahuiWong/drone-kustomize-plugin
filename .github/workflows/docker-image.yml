@@ -35,4 +35,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: yahuiwong/drone-argocd-plugin:${{ steps.branch-name.outputs.current_branch }}-${{ steps.commit.outputs.short }}
+          tags: yahuiwong/drone-kustomize-plugin:${{ steps.branch-name.outputs.current_branch }}-${{ steps.commit.outputs.short }}
