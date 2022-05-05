@@ -7,7 +7,7 @@ echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
 git config user.email ${PLUGIN_GITOPS_EMAIL}
 git config user.name ${PLUGIN_GITOPS_NAME}
 git clone ${PLUGIN_GITOPS_URL} GitOps --config core.sshCommand="ssh -i ~/.ssh/id_rsa"
-cd GitOps/kustomize-guestbook
+cd GitOps/${PLUGIN_GITOPS_DIRECTORY}
 kustomize edit set image gcr.io/heptio-images/ks-guestbook-demo:0.1
 git add .
 git commit -m 'update'
