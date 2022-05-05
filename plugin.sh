@@ -8,7 +8,8 @@ git config user.email ${GITOPS_EMAIL}
 git config user.name ${GITOPS_NAME}
 git clone ${GITOPS_URL} GitOps --config core.sshCommand="ssh -i ~/.ssh/id_rsa"
 cd GitOps/${GITOPS_DIRECTORY}
-kustomize edit set image gcr.io/heptio-images/ks-guestbook-demo:0.1
+# ``kustomize edit set image gcr.io/heptio-images/ks-guestbook-demo:0.1``
+`${KUSTOMIZE_COMMAND}`
 git add .
 git commit -m 'update'
 git push 
