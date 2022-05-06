@@ -6,6 +6,7 @@ chmod 600 ~/.ssh/id_rsa
 echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
 git config user.email ${GITOPS_EMAIL}
 git config user.name ${GITOPS_NAME}
+set -xv
 git clone ${GITOPS_URL} GitOps --config core.sshCommand="ssh -i ~/.ssh/id_rsa"
 cd GitOps/${GITOPS_DIRECTORY}
 # ``kustomize edit set image gcr.io/heptio-images/ks-guestbook-demo:0.1``
