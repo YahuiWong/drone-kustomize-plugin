@@ -7,7 +7,7 @@ Demo
     image: yahuiwong/drone-kustomize-plugin:master-4682364
     environment:
       GITOPS_SSHKEY:
-        from_secret: gitops_sshkey
+        from_secret: gitops_sshkey # base64
       GITOPS_EMAIL:
         from_secret: gitops_email
       GITOPS_NAME:
